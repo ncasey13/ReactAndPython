@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 
-const Navbar = ({ userinfo }) => {
+const HomeComponent = ({  }) => {
   return (
     <div>
-      <h1>Users</h1>
+      <h1>Home</h1>
     </div>
   );
 };
 
-export default Navbar;
+export default HomeComponent;

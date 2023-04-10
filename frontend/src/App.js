@@ -1,8 +1,8 @@
 import logo from "./logo.svg";
 import "./App.css";
 import Header from "./components/Header";
-import Home from "./components/Home";
-import Users from "./components/Users";
+import Home from "./pages/Home";
+import Users from "./pages/Users";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
