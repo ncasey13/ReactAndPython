@@ -36,6 +36,7 @@ def create():
   if request.method == 'GET':
       mycursor.execute("SELECT * FROM users")
       data = mycursor.fetchall()
+      print(data)
       return jsonify(data)
         
 

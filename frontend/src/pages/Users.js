@@ -25,7 +25,7 @@ const Users = ({ userinfo }) => {
   }, [refreshTrigger]);
 
   useEffect(() => {
-    setTimeout(set, 5000);
+    setTimeout(set, 3000);
   }, [refreshTrigger]);
   const set = () => {
     setRT(!refreshTrigger);
@@ -39,7 +39,9 @@ const Users = ({ userinfo }) => {
         email: email,
         phone: phone,
       })
-      .then((response) => {});
+      .then((response) => {
+        setRT(!refreshTrigger);
+      });
     setFirstName("");
     setLastName("");
     setEmail("");
