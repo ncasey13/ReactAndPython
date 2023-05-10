@@ -15,6 +15,7 @@ const Navbar = ({ userinfo }) => {
             </NavItem>
           </NavLink>
           <NavLink to="/users">Users</NavLink>
+          <NavLink to="/Pictures">Pictures</NavLink>
         </NavMenu>
         <NavMenuRight></NavMenuRight>
       </Nav>

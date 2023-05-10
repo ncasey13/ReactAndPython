@@ -40,3 +40,14 @@
 div.container {
   margin: auto;
 }
+
+.tbl {
+  border: black solid;
+  margin-top: 100px;
+  padding: 0;
+}
+
+td, tr {
+  margin: 0;
+  padding: 0;
+}
