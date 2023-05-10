@@ -48,6 +48,12 @@ const Users = ({ userinfo }) => {
     setPhone("");
   };
 
+  const remove = (id) => {
+    instance.post("/remove", { id: id }).then(() => {
+      setRT(!refreshTrigger);
+    });
+  };
+
   return (
     <div>
       <h1>Users</h1>
@@ -121,7 +127,7 @@ const Users = ({ userinfo }) => {
           </Row>
         </Form>
       </div>
-      <UsersComponent users={users} key={1}></UsersComponent>
+      <UsersComponent users={users} onDelete={remove} key={1}></UsersComponent>
     </div>
   );
 };

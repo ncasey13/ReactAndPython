@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-const UsersComponent = ({ users }) => {
+const UsersComponent = ({ users, onDelete }) => {
   return (
     <>
       <div className="table-responsive">
@@ -20,6 +20,24 @@ const UsersComponent = ({ users }) => {
                 <td>{user[1]}</td>
                 <td>{user[2]}</td>
                 <td>{user[3]}</td>
+                <td>
+                  <button
+                    className="btn btn-outline-danger"
+                    onClick={(e) => {
+                      if (
+                        !window.confirm(
+                          "Are you sure you want to delete this User?"
+                        )
+                      ) {
+                        e.preventDefault();
+                      } else {
+                        onDelete(user[4]);
+                      }
+                    }}
+                  >
+                    Delete
+                  </button>
+                </td>
               </tr>
             ))}
           </tbody>
